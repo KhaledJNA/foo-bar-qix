@@ -31,5 +31,36 @@ public class FooBarQixTest
 
 	}
 	
+	@Test
+	public void shouldReturnBarBar() {
+		int value = 5;
+		String expected = "BarBar";
+
+		String actual = fooBarQix.process(value);
+
+		assertEquals(expected, actual);
+
+	}
+	
+	@Test
+	public void shouldReturnQix() {
+		int value = 7;
+		String expected = "Qix";
+
+		String actual = fooBarQix.process(value);
+
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void shouldReturnQixQix() {
+		int value = 77;
+		String expected = "QixQix";
+
+		String actual = fooBarQix.process(value);
+
+		assertEquals(expected, actual);
+	}
+	
 	
 }
