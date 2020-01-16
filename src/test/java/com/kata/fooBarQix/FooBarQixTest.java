@@ -20,9 +20,7 @@ public class FooBarQixTest {
 	public void shouldReturnFooFoo() {
 		int value = 3;
 		String expected = "FooFoo";
-
 		String actual = fooBarQix.process(value);
-
 		assertEquals(expected, actual);
 
 	}
@@ -31,9 +29,7 @@ public class FooBarQixTest {
 	public void shouldReturnBarBar() {
 		int value = 5;
 		String expected = "BarBar";
-
 		String actual = fooBarQix.process(value);
-
 		assertEquals(expected, actual);
 
 	}
@@ -42,9 +38,7 @@ public class FooBarQixTest {
 	public void shouldReturnQix() {
 		int value = 7;
 		String expected = "Qix";
-
 		String actual = fooBarQix.process(value);
-
 		assertEquals(expected, actual);
 	}
 
@@ -52,9 +46,7 @@ public class FooBarQixTest {
 	public void shouldReturnQixQix() {
 		int value = 77;
 		String expected = "QixQix";
-
 		String actual = fooBarQix.process(value);
-
 		assertEquals(expected, actual);
 	}
 
@@ -73,7 +65,7 @@ public class FooBarQixTest {
 		assertEquals(expected, actual);
 
 	}
-	
+
 	@Test
 	public void shouldReturnBar() {
 		int value = 10;
@@ -81,6 +73,22 @@ public class FooBarQixTest {
 
 		String actual = fooBarQix.process(value);
 
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void shouldReturnFooBar() {
+		int value = 51;
+		String expected = "FooBar";
+		String actual = fooBarQix.process(value);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void shouldReturnBarFoo() {
+		int value = 53;
+		String expected = "BarFoo";
+		String actual = fooBarQix.process(value);
 		assertEquals(expected, actual);
 	}
 
