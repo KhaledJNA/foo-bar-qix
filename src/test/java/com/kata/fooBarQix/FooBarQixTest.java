@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * @author khaledbentaleb Unit test for simple FooBarQixTest.
+ * @author khaledbentaleb Unit test for simple FooBarQix.
  */
 public class FooBarQixTest {
 	private static FooBarQix fooBarQix;

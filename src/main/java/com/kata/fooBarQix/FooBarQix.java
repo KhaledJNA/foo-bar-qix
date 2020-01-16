@@ -1,9 +1,11 @@
 package com.kata.fooBarQix;
 
+import java.io.PrintStream;
 import java.io.Serializable;
 import java.util.Map;
+import java.util.function.IntConsumer;
 import java.util.stream.Collectors;
-
+import java.util.stream.IntStream;
 
 /**
  * 
@@ -16,15 +18,6 @@ public class FooBarQix implements Serializable {
 
 	private Map<Integer, String> fooBarQix;
 	private Map<Integer, String> fooBar;
-
-	private static class FooBarQixHolder {
-		private final static FooBarQix instance = new FooBarQix();
-
-	}
-
-	public static FooBarQix getInstance() {
-		return FooBarQixHolder.instance;
-	}
 
 	private FooBarQix() {
 		fooBarQix = Map.of(3, "Foo", 5, "Bar", 7, "Qix");
@@ -45,6 +38,27 @@ public class FooBarQix implements Serializable {
 
 		return result.toString().isEmpty() ? String.valueOf(value) : result.toString();
 
+	}
+
+	public IntConsumer print(PrintStream printer) {
+		return index -> printer.println(process(index));
+	}
+
+	public void print(PrintStream printer, IntStream stream) {
+		stream.forEach(i -> printer.println(process(i)));
+	}
+
+	public void print(PrintStream printer, int start, int endInclusive) {
+		IntStream.range(start, endInclusive+1).forEach(i -> printer.println(process(i)));
+	}
+
+	private static class FooBarQixHolder {
+		private final static FooBarQix instance = new FooBarQix();
+
+	}
+
+	public static FooBarQix getInstance() {
+		return FooBarQixHolder.instance;
 	}
 
 	protected Object readResolve() {
