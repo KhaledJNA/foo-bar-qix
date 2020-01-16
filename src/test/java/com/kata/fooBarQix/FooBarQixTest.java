@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+
 /**
  * @author khaledbentaleb Unit test for simple FooBarQixTest.
  */
@@ -13,7 +14,7 @@ public class FooBarQixTest {
 
 	@BeforeAll
 	public static void init() {
-		fooBarQix = new FooBarQix();
+		fooBarQix = FooBarQix.getInstance();
 	}
 
 	@Test
