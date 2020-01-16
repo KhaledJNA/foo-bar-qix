@@ -110,6 +110,12 @@ public class FooBarQixTest {
 		assertEquals(expected, actual);
 	}
 
-	
+	@Test
+	public void shouldReturnFooQix() {
+		int value = 27;
+		String expected = "FooQix";
+		String actual = fooBarQix.process(value);
+		assertEquals(expected, actual);
+	}
 
 }
