@@ -99,5 +99,17 @@ public class FooBarQixTest {
 		String actual = fooBarQix.process(value);
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void shouldReturnFooFooFoo() {
+		int value = 33;
+		String expected = "FooFooFoo";
+
+		String actual = fooBarQix.process(value);
+
+		assertEquals(expected, actual);
+	}
+
+	
 
 }
