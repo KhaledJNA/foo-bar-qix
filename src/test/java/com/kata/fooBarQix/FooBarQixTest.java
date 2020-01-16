@@ -63,8 +63,6 @@ public class FooBarQixTest {
 		int value1 = 12;
 		int value2 = 9;
 		int value3 = 13;
-
-
 		String expected = "Foo";
 
 		String actual = fooBarQix.process(value1);
@@ -74,10 +72,16 @@ public class FooBarQixTest {
 		actual = fooBarQix.process(value3);
 		assertEquals(expected, actual);
 
-
-
 	}
-
 	
+	@Test
+	public void shouldReturnBar() {
+		int value = 10;
+		String expected = "Bar";
+
+		String actual = fooBarQix.process(value);
+
+		assertEquals(expected, actual);
+	}
 
 }
