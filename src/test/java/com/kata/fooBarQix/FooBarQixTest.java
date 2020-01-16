@@ -5,21 +5,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-
 /**
- * @author khaledbentaleb
- * Unit test for simple FooBarQixTest.
+ * @author khaledbentaleb Unit test for simple FooBarQixTest.
  */
-public class FooBarQixTest
-{
-	private static FooBarQix fooBarQix ;
+public class FooBarQixTest {
+	private static FooBarQix fooBarQix;
 
-	
 	@BeforeAll
 	public static void init() {
 		fooBarQix = new FooBarQix();
 	}
-	
+
 	@Test
 	public void shouldReturnFooFoo() {
 		int value = 3;
@@ -30,7 +26,7 @@ public class FooBarQixTest
 		assertEquals(expected, actual);
 
 	}
-	
+
 	@Test
 	public void shouldReturnBarBar() {
 		int value = 5;
@@ -41,7 +37,7 @@ public class FooBarQixTest
 		assertEquals(expected, actual);
 
 	}
-	
+
 	@Test
 	public void shouldReturnQix() {
 		int value = 7;
@@ -51,7 +47,7 @@ public class FooBarQixTest
 
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void shouldReturnQixQix() {
 		int value = 77;
@@ -61,15 +57,27 @@ public class FooBarQixTest
 
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void shouldReturnFoo() {
-		int value = 12;
+		int value1 = 12;
+		int value2 = 9;
+		int value3 = 13;
+
+
 		String expected = "Foo";
 
-		String actual = fooBarQix.process(value);
+		String actual = fooBarQix.process(value1);
 		assertEquals(expected, actual);
+		actual = fooBarQix.process(value2);
+		assertEquals(expected, actual);
+		actual = fooBarQix.process(value3);
+		assertEquals(expected, actual);
+
+
+
 	}
+
 	
-	
+
 }
