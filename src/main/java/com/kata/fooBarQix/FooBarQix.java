@@ -16,7 +16,7 @@ public class FooBarQix {
 	public String process(Integer value) {
 		StringBuilder result = new StringBuilder();
 		//  manage the case where the value is divisible by the keys of the fooBar map
-		result.append(fooBar.keySet().stream().filter(key -> value % key == 0).map(fooBar::get)
+		result.append(fooBar.keySet().stream().sorted().filter(key -> value % key == 0).map(fooBar::get)
 				.collect(Collectors.joining()));
 
 		// manage the case whene we have to replace the characters that make up the
