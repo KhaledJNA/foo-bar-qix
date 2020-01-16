@@ -62,5 +62,14 @@ public class FooBarQixTest
 		assertEquals(expected, actual);
 	}
 	
+	@Test
+	public void shouldReturnFoo() {
+		int value = 12;
+		String expected = "Foo";
+
+		String actual = fooBarQix.process(value);
+		assertEquals(expected, actual);
+	}
+	
 	
 }
