@@ -2,20 +2,13 @@ package com.kata.fooBarQix;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * @author khaledbentaleb Unit test for simple FooBarQix.
  */
 public class FooBarQixTest {
-	private static FooBarQix fooBarQix;
-
-	@BeforeAll
-	public static void init() {
-		fooBarQix = FooBarQix.getInstance();
-	}
+	private FooBarQix fooBarQix = FooBarQix.getInstance();
 
 	@Test
 	public void shouldReturnFooFoo() {
@@ -100,7 +93,7 @@ public class FooBarQixTest {
 		String actual = fooBarQix.process(value);
 		assertEquals(expected, actual);
 	}
-	
+
 	@Test
 	public void shouldReturnFooFooFoo() {
 		int value = 33;
